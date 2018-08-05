@@ -1,15 +1,17 @@
-console.log('starting app!');
+console.log('Starting app.js!');
 
 //require and call node modules
 
 //tell node to fetch all the contents of the fs module and store in fs variable
 const fs = require('fs');
 const os = require('os');
+//requiring files
+const notes = require('./notes.js');
 
 
 let user = os.userInfo();
-console.log(user);
-let greeting = `Hello, ${user.username}!!!!!`;
+// console.log(user);
+let greeting = `Hello, ${user.username}!!!!! You are ${notes.age}.`;
 
 
 fs.appendFile('greetings.txt', greeting, function(err){
