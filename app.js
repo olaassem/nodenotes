@@ -9,14 +9,24 @@ const os = require('os');
 const notes = require('./notes.js');
 
 
-let user = os.userInfo();
-// console.log(user);
-let greeting = `Hello, ${user.username}!!!!! You are ${notes.age}.`;
 
 
-fs.appendFile('greetings.txt', greeting, function(err){
-  if(err){
-    console.log('Unable to write to file');
-  }
-  console.log(greeting);
-});
+let result = notes.addNote();
+console.log(result);
+
+let sum = notes.add(100,1);
+console.log(sum);
+
+
+
+// let user = os.userInfo();
+// // console.log(user);
+// let greeting = `Hello, ${user.username}!!!!! You are ${notes.age}.`;
+//
+//
+// fs.appendFile('greetings.txt', greeting, function(err){
+//   if(err){
+//     console.log('Unable to write to file');
+//   }
+//   console.log(greeting);
+// });
