@@ -7,15 +7,23 @@ const fs = require('fs');
 const os = require('os');
 //requiring files
 const notes = require('./notes.js');
+//requiring 3rd party modules
+const _ = require('lodash');
+
+
+// console.log(_.isString(true));
+// console.log(_.isString('Ola'));
+
+let filteredArray = _.uniq(['ola',1,'ola',1,2,3,4]);
+console.log(filteredArray);
 
 
 
-
-let result = notes.addNote();
-console.log(result);
-
-let sum = notes.add(100,1);
-console.log(sum);
+// let result = notes.addNote();
+// console.log(result);
+//
+// let sum = notes.add(100,1);
+// console.log(sum);
 
 
 
